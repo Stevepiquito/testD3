@@ -25,13 +25,14 @@ d3.tsv("SubDataTab.tsv", function(d) {
   var root = d3.hierarchy({children: classes})
       .sum(function(d) { return d.award_value; })
       .each(function(d) {
-        if (subagency_name = d.data.subagency_name) {
-          var subagency_name, i = subagency_name.lastIndexOf(".");
-          d.subagency_name = subagency_name;
-          d.package = subagency_name.slice(0, i);
-          d.class = subagency_name.slice(i + 1);
+        if (id = d.data.id) {
+          var id, i = id.lastIndexOf(".");
+          d.id = id;
+          d.package = id.slice(0, i);
+          d.class = id.slice(i + 1);
         }
       });
+
 
   var node = svg.selectAll(".node")
     .data(pack(root).leaves())
@@ -59,7 +60,8 @@ d3.tsv("SubDataTab.tsv", function(d) {
       .text(function(d) { return d; });
 
   node.append("title")
-      .text(function(d) { return d.subagency_name + "\n" + format(d.award_value); });
+      //.text(function(d) { return d.id + "\n" + format(d.award_value); });
+	.text(function(d) { return d.id + "\n" + format(d.award_value); });
 });
 
 </script>
