@@ -9,13 +9,18 @@
 
 <h1>Breakdown by Sub-Agency of the Award Allocation for FY2017</h1>
 <br>
+
+<script>
+var PrimaryAgency = localStorage.getItem("PrimaryAgency");
+document.write("The selected agency is: "+PrimaryAgency);
+</script>
+
+
 <svg width="960" height="960" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
 
 
 <script>
 
-var PrimaryAgency = localStorage.getItem("PrimaryAgency");
-document.write("The selected agency is: "+PrimaryAgency);
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
