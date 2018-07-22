@@ -19,8 +19,8 @@
     opacity: 0;
     position: absolute;
     text-align: center;
-    width: 60px; height: 40px;
-    background: white;
+    width: 500px; height: 400px;
+    background: red;
     border: 10px;
 }
 
@@ -79,17 +79,21 @@ d3.tsv("data.tsv", function(d) {
       .attr("y", 400)
       .attr("width", x.bandwidth())
       .attr("height", 20)
-      .transition().duration(3000).delay(1000)
-      .attr("y", function(d) { return y(d.frequency); })
-      .attr("height", function(d) { return height - y(d.frequency); })
+
       .on("mouseover", function(d,i) {
           tooltip.style("opacity", 1)
-          .style("left",(d3.event.pageX)+"px")
-          .style("top",(d3.event.pageY)+"px")
-          .html("Item #"+i+" is "+d);
+          //.style("left",(d3.event.pageX)+"px")
+          //.style("top",(d3.event.pageY)+"px")
+          .style("left",svg.attr("width")+"px")
+          .style("top","100px")
+          .html("Item #"+i+" is "+d.letter);
 
        })
-      .on("mouseout", function() { tooltip.style("opacity", 0) });
+      .on("mouseout", function() { tooltip.style("opacity", 0) })
+
+      .transition().duration(3000).delay(1000)
+      .attr("y", function(d) { return y(d.frequency); })
+      .attr("height", function(d) { return height - y(d.frequency); });
 
 
 });
