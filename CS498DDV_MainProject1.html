@@ -134,7 +134,7 @@ d3.tsv("PrimaryDataTab.tsv", function(d) {
        .on("click", function(d,i) {
 	//Implement on click event code here:
 		//location.replace("http://www.microsoft.com"); 
-		localStorage.setItem("PrimaryAgency","testPrimaryAgency");
+		localStorage.setItem("PrimaryAgency",d.agency_short);
 		location.replace("CS498DDV_MainProject2.html"); 
 
        })
