@@ -12,7 +12,7 @@
 
 <script>
 var PrimaryAgency = localStorage.getItem("PrimaryAgency");
-document.write("The selected agency is: "+PrimaryAgency);
+document.write("The agency you have selected is: "+PrimaryAgency+" and the below bubble chart shows the allocation to sub-agencies from this contract awarding entity");
 
 
 </script>
@@ -90,6 +90,13 @@ d3.tsv("SubDataTab.tsv", function(d) {
 });
 
 </script>
+
+<br><br>
+<div name="myEnding">
+To return to the overall Primary Agency Spending Page, please <a href="CS498DDV_MainProject1.html">click here</a>
+
+
+</div>
 
 
 
