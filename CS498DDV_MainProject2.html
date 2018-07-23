@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<html>
+
 <head>
 </head>
 
@@ -41,7 +41,7 @@ var pack = d3.pack()
 d3.tsv("SubDataTab.tsv", function(d) {
   d.award_value = +d.award_value;
 //  if (d.award_value && d.primary_code==PrimaryAgency) return d;
-  document.write("test hello");
+//  document.write("test hello");
   if (d.award_value) return d;
 
 }, function(error, classes) {
