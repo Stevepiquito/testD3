@@ -40,11 +40,9 @@ var pack = d3.pack()
 
 d3.tsv("SubDataTab.tsv", function(d) {
   d.award_value = +d.award_value;
-//  if (d.award_value && d.primary_code==PrimaryAgency) return d;
-//  if (d.primary_code==PrimaryAgency) document.write("testing succesful");
-    document.write(typeof(PrimaryAgency));
-    document.write(typeof(d.primary_code));
-    if (d.award_value) return d;
+//if (d.award_value && d.primary_code==PrimaryAgency) return d;
+//if (d.primary_code==PrimaryAgency) document.write("testing succesful");
+  if ((d.award_value) && (d.primary_code==PrimaryAgency))return d;
 
 }, function(error, classes) {
   if (error) throw error;
