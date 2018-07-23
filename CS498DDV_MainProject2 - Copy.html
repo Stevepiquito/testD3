@@ -21,7 +21,6 @@ document.write("The selected agency is: "+PrimaryAgency);
 
 <script>
 
-var PrimaryAgency = localStorage.getItem("PrimaryAgency");
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -38,7 +37,7 @@ var pack = d3.pack()
 
 d3.tsv("SubDataTab.tsv", function(d) {
   d.award_value = +d.award_value;
-  if (d.award_value && d.primary_code==PrimaryAgency) return d;
+  if (d.award_value) return d;
 }, function(error, classes) {
   if (error) throw error;
 
