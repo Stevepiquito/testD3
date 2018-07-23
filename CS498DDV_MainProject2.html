@@ -76,7 +76,7 @@ d3.tsv("SubDataTab.tsv", function(d) {
       .attr("xlink:href", function(d) { return "#" + d.id; });
 
   node.append("text")
-      .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
+      .attr("clip-path", function(d) { return "url(#clip-" + d.sub_code + ")"; })
     .selectAll("tspan")
     .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
     .enter().append("tspan")
