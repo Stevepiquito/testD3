@@ -89,7 +89,7 @@ d3.tsv("SubDataTab.tsv", function(d) {
 
   node.append("title")
       //.text(function(d) { return d.id + "\n" + format(d.award_value); });
-	.text(function(d) { return d.id + "\n representing $" + format(d.data.award_value*1000)+"mn of spending during FY2017 \n or approximately "+format(round(d.data.award_value/1.27,2))+"% of the total budget"; });
+	.text(function(d) { return d.id + "\n representing $" + format(d.data.award_value*1000)+"mn of spending during FY2017 \n or approximately "+format(Math.round(d.data.award_value/1.27,2))+"% of the total budget"; });
 
 });
 
