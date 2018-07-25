@@ -89,7 +89,7 @@ d3.tsv("SubDataTab.tsv", function(d) {
 
   node.append("title")
       //.text(function(d) { return d.id + "\n" + format(d.award_value); });
-	.text(function(d) { return d.id + "\n" + format(d.data.award_value*1000)+"mn of spending"; });
+	.text(function(d) { return d.id + "\n" + (d.data.award_value); });
 
 });
 
