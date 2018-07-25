@@ -84,7 +84,8 @@ d3.tsv("SubDataTab.tsv", function(d) {
     .enter().append("tspan")
       .attr("x", 0)
       .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
-      .text(function(d) { return d.sub_code; });
+//      .text(function(d) { return d; });
+      .text(function(d) { "Test"; });
 
   node.append("title")
       //.text(function(d) { return d.id + "\n" + format(d.award_value); });
