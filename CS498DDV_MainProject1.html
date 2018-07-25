@@ -20,7 +20,7 @@
     position: absolute;
     text-align: center;
     width: 500px; height: 400px;
-    background: crimson;
+    background: brown;
     border: 10px;
 }
 
@@ -30,7 +30,7 @@
  display: block;
  height: 50px;
  width: 300px;
- background: crimson;
+ background: brown;
  border: 2px solid rgba(33, 68, 72, 0.59);
  
  /*Step 3: Text Styles*/
@@ -63,7 +63,7 @@
 Have you ever thought about where and how the US Government awards contracts to the private sector and how these funds are allocated across a range of diversified recipients? National expenditure in this regard is a critical element of achieving the goal of succesful governance across both social and commercial goals of a country.
 <br>
 <br>
-The graph below shows the spending for the fiscal year of 2017 (this is not the same as the calender year) across the major awarding agencies operating in the US Government excluding military contracts. These agencies are designated as Primary Awarding Agencies who then in turn allocate awards by Sub-Agencies for more granular focus areas. Simply hover over an agency to see their summary details and purpose and click on a specific agency to see the more granular award spending by sub-agency.
+The graph below shows the spending for the fiscal year of 2017 across the major awarding agencies operating within the US Government and, excluding military contracting, represents approximately $127bn in expenditure. These agencies are designated as Primary Awarding Agencies who then in turn allocate awards by Sub-Agencies for more granular focus areas. Simply hover over an agency to see their summary details and purpose and click on a specific agency to see the more granular award spending by sub-agency.
 </div>
 
 <svg width="960" height="500"></svg>
@@ -126,7 +126,7 @@ d3.tsv("PrimaryDataTab.tsv", function(d) {
           .style("left",svg.attr("width")+"px")
           .style("top","220px")
 	  //.style("top",myIntro.attr("height")+"px")
-          .html("Item #"+i+" is "+d.awarding_agency+"<br><br>"+"Agency Mission: "+d.agency_mission+"<br><br>"+"Web Link: <a href="+d.agency_web+">"+d.agency_web+"</a>");
+          .html("Agency #"+(i+1)+" is "+d.awarding_agency+"<br><br>"+"Agency Mission: "+d.agency_mission+"<br><br>"+"Web Link: <a href="+d.agency_web+">"+d.agency_web+"</a>");
  	  //.html("Item #"+i+" is "+d.awarding_agency); 
 
        })
