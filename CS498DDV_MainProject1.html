@@ -3,7 +3,8 @@
 <style>
 
 .bar {
-  fill: steelblue;
+//  fill: steelblue;
+  fill: rgba(21,30,63,1);
 }
 
 .bar:hover {
@@ -120,14 +121,15 @@ d3.tsv("PrimaryDataTab.tsv", function(d) {
       .attr("height", 20)
 
       .on("mouseover", function(d,i) {
-	  tooltip.style("opacity", 0)
-	  .transition().duration(1000)
+	  //tooltip.style("opacity", 0)
+	  //.transition().duration(1000)
           tooltip.style("opacity", 1)
           //.style("left",(d3.event.pageX)+"px")
           //.style("top",(d3.event.pageY)+"px")
           .style("left",svg.attr("width")+"px")
           .style("top","220px")
 	  //.style("top",myIntro.attr("height")+"px")
+	  .transition().duration(1000)
           .html("Agency #"+(i+1)+" is "+d.awarding_agency+"<br><br>"+"Agency Mission: "+d.agency_mission+"<br><br>"+"Web Link: <a href="+d.agency_web+">"+d.agency_web+"</a>");
  	  //.html("Item #"+i+" is "+d.awarding_agency); 
 
