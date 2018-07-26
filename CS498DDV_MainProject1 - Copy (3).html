@@ -131,7 +131,7 @@ d3.tsv("PrimaryDataTab.tsv", function(d) {
           .style("top","220px")
 	  //.style("top",myIntro.attr("height")+"px")
 	  //.transition().duration(1000)
-          .html("<br><b>Agency #"+(i+1)+"</b> is "+d.awarding_agency+"<br><br>"+"<b>Agency Mission:</b> "+d.agency_mission+"<br><br><b>Agency Spend:</b> $"+d.award_value+"bn<br><br><b>Web Link:</b> <a href="+d.agency_web+">"+d.agency_web+"</a>");
+          .html("Agency #"+(i+1)+" is "+d.awarding_agency+"<br><br>"+"Agency Mission: "+d.agency_mission+"<br><br>Agency Spend: $"+d.award_value+"bn<br><br>Web Link: <a href="+d.agency_web+">"+d.agency_web+"</a>");
  	  //.html("Item #"+i+" is "+d.awarding_agency); 
 
        })
