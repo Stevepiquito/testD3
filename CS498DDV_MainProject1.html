@@ -120,8 +120,9 @@ d3.tsv("PrimaryDataTab.tsv", function(d) {
       .attr("height", 20)
 
       .on("mouseover", function(d,i) {
+	  tooltip.style("opacity", 0)
 	  .transition().duration(1000)
-          tooltip.style("opacity", 0.1)
+          tooltip.style("opacity", 1)
           //.style("left",(d3.event.pageX)+"px")
           //.style("top",(d3.event.pageY)+"px")
           .style("left",svg.attr("width")+"px")
