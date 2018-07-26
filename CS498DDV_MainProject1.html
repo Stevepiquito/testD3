@@ -4,12 +4,12 @@
 
 .bar {
 //  fill: steelblue;
-  fill: rgba(21,30,63,0.8);
+  fill: rgba(21,30,63,1);
 }
 
 .bar:hover {
 //  fill: brown;
-  fill: rgba(220,158,130,1);
+  fill: rgba(220,158,130,0.8);
 }
 
 .axis--x path {
@@ -75,7 +75,7 @@ The graph below shows the spending for the fiscal year of 2017 across the major 
 <script>
 
 var tooltip = d3.select("#tooltip");
-var TotalSpendFY2017 = 3.98*1000;
+var TotalSpendFY2017 = 127;
 
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -131,7 +131,7 @@ d3.tsv("PrimaryDataTab.tsv", function(d) {
           .style("top","220px")
 	  //.style("top",myIntro.attr("height")+"px")
 	  //.transition().duration(1000)
-          .html("Agency #"+(i+1)+" is "+d.awarding_agency+"<br><br>"+"Agency Mission: "+d.agency_mission+"<br><br>"+"Web Link: <a href="+d.agency_web+">"+d.agency_web+"</a>");
+          .html("Agency #"+(i+1)+" is "+d.awarding_agency+"<br><br>"+"Agency Mission: "+d.agency_mission+"<br><br>Agency Spend: $"+d.award_value+"bn<br><br>Web Link: <a href="+d.agency_web+">"+d.agency_web+"</a>");
  	  //.html("Item #"+i+" is "+d.awarding_agency); 
 
        })
@@ -168,7 +168,7 @@ The source of this data is from the <a href="http://www.USAspending.gov">www.USA
 
 <br><br>
 Name: <b>Steven Piquito</b><br>
-Course: <b>CS498 Data Visualisation Summer 2018</b><br>
+Course: <b>CS498 Data Visualisation Summer 2018</b><br><br>
 
 If you would like to know more about the design of this visualisation, please click the below button:
 <br><br>
