@@ -26,7 +26,7 @@ The narrative visualisation project makes use of annotations first on the first 
 
 <br><br>
 
-The visualisation utilises parameters as follows:
+The narrative visualisation utilises parameters as follows:
 <ul style="list-style-type:circle">
 <li>Selected individual bar through a mouse over event is used to dynamically select the appropriate content to display in the large pop-up box to the right of the bar chart visualisation in the first scene (Primary Awarding agencies)</li>
 <li>There are two hidden parameters used to maintain the linkage between the first scene and the second scene which stores the agency short name (e.g. DOJ) as well as the agency long name (e.g. Department of Justice). Through these parameters stored in the HTML5 localStorage approach, the narrative visualisation is able to link the chosen Primary Agency clicked on in the bar chart to dynamically display the Sub-Agency bubble chart in scen 2 as well as display the relevant selected agency name in the initial paragraph.</li>  
@@ -35,6 +35,13 @@ The visualisation utilises parameters as follows:
 
 <br><br>  
 
+The narrative visualisation utilises the following triggers:
+<ul style="list-style-type:circle">
+<li>A 'mouse hover over' trigger is used to change the selected bar chart colour in the first scene in order to accentuate a specific agency from the remaining non-selected agencies</li>
+<li>The 'mouse over' trigger is also used to trigger the large pop-up box to the right of bar chart to appear as well as display only relevant data for the highlighted agency bar</li>  
+<li>A 'mouse click' event trigger is also used to denote the user's selection of a given agency in the bar chart and to transition to scene 2 for the the more granular Sub-Agency analysis via a bubble chart visualisation</li>
+<li>A 'mouse hover over' trigger is used in the second scene to generate a tooltip pop-up box over a selected bubble and display specific information on demand</li>
+</ul> 
 
 <br><br>
 <div name="myEnding">
