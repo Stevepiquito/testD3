@@ -12,11 +12,28 @@
 <br>
 For my CS498 Data Visualisation course final project, I have chosen to create a visualisation that allows a single user to analyse the contractual awarding spend across the various government agencies for the fiscal year of 2017. Contractual spending is only one part of the overall government expenditure, estimated to be close to $3.98 trillion for FY2017, and represents an interesting and varied dataset for analysis as for optimal expenditure across a range of competing interests. The dataset I used for this visualisation is publicly available from the <a href="http://www.USAspending.gov">USASpending.gov</a> web-site. Finally it should be noted that I have chosen to explicitly exclude military contract spending relating to the Department of Defence (DOD) in order to focus on the non-military aspects of government expenditure.
 
+<br><br>
+
 So for the chosen hybrid structure of my narrative visualisation, I selected a <b>drill down</b> story approach as I felt this best fit my intent to allow a single user to interrogate and analyse the dataset without providing any pre-conceived conclusions on my part. To achieve this hybrid-model, the visualisation comprises a first html web-page with a dynamic bar chart to show the Primary Awarding agency expenditure for FY2017. The user has the ability to highlight each agency by hovering over each bar for additional information on demand. The user as well then choose to click on a specific Primary Awarding agency upon which a new html web-page will pop-up with a more granular bubble chart visualisation showing the allocation from the Primary Agency toward Sub-Agencies. At this page, the user can then however over each bubble to find out even more specific information for each Sub-Agency.
 
-My narrative visualisation makes use of two specific scenes, the first scene relating to the expenditure pattern and overview for Primary Awarding agencies to begin with. Then a second scene can be found by clicking on an individual bar in the chart to arrive at a more granular bubble chart analysis of Sub-Agency spending corresponding to the chosen Primary Awarding agency.
+<br><br>
 
-My narrative visualisation project makes use of annotations first on the first scene whereby the user can however over an individual bar in the chart and a large pop-up box will display to the right of the bar chart and provide additional information relevant to the highlighted bar such as the full department name, agency mission, agency expenditure as well as clickable link to the agency's web-site. You will note that I made the pop-up box appear static if the user moves the mouse off a chosen bar, this is to allow the user to be able to click the web-site link in the popup box annotation. On my second scene (the Sub-Agency bubble chart analysis), annotation can be found by hovering the mouse over an individual bubble whereby a small pop-up box will appear displaying the full Sub-Agency name, agency expenditure as well the % of agency expenditure to the total budget allocation  
+The narrative visualisation makes use of two specific scenes, the first scene relating to the expenditure pattern and overview for Primary Awarding agencies to begin with. Then a second scene can be found by clicking on an individual bar in the chart to arrive at a more granular bubble chart analysis of Sub-Agency spending corresponding to the chosen Primary Awarding agency.
+
+<br><br>
+
+The narrative visualisation project makes use of annotations first on the first scene whereby the user can however over an individual bar in the chart and a large pop-up box will display to the right of the bar chart and provide additional information relevant to the highlighted bar such as the full department name, agency mission, agency expenditure as well as clickable link to the agency's web-site. You will note that I made the pop-up box appear static if the user moves the mouse off a chosen bar, this is to allow the user to be able to click the web-site link in the popup box annotation. On my second scene (the Sub-Agency bubble chart analysis), annotation can be found by hovering the mouse over an individual bubble whereby a small pop-up box will appear displaying the full Sub-Agency name, agency expenditure as well the % of agency expenditure to the total budget allocation.
+
+<br><br>
+
+The visualisation utilises parameters as follows:
+<ul style="list-style-type:circle">
+<li>Selected individual bar through a mouse over event is used to dynamically select the appropriate content to display in the large pop-up box to the right of the bar chart visualisation in the first scene (Primary Awarding agencies)</li>
+<li>There are two hidden parameters used to maintain the linkage between the first scene and the second scene which stores the agency short name (e.g. DOJ) as well as the agency long name (e.g. Department of Justice). Through these parameters stored in the HTML5 localStorage approach, the narrative visualisation is able to link the chosen Primary Agency clicked on in the bar chart to dynamically display the Sub-Agency bubble chart in scen 2 as well as display the relevant selected agency name in the initial paragraph.</li>  
+<li>Lastly again on the bubble chart, the mouse over event is used to select a specific Sub-Agency in order to display the relevant information in the tooltip pop-up anootation correctly</li>
+</ul>
+
+<br><br>  
 
 
 <br><br>
