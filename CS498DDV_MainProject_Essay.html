@@ -18,28 +18,28 @@ So for the chosen hybrid structure of my narrative visualisation, I selected a <
 
 <br><br>
 
-The narrative visualisation makes use of two specific scenes, the first scene relating to the expenditure pattern and overview for Primary Awarding agencies to begin with. Then a second scene can be found by clicking on an individual bar in the chart to arrive at a more granular bubble chart analysis of Sub-Agency spending corresponding to the chosen Primary Awarding agency.
+The narrative visualisation makes use of two specific <b>scenes</b>, the first scene relating to the expenditure pattern and overview for Primary Awarding agencies to begin with. Then a second scene can be found by clicking on an individual bar in the chart to arrive at a more granular bubble chart analysis of Sub-Agency spending corresponding to the chosen Primary Awarding agency.
 
 <br><br>
 
-The narrative visualisation project makes use of annotations first on the first scene whereby the user can however over an individual bar in the chart and a large pop-up box will display to the right of the bar chart and provide additional information relevant to the highlighted bar such as the full department name, agency mission, agency expenditure as well as clickable link to the agency's web-site. You will note that I made the pop-up box appear static if the user moves the mouse off a chosen bar, this is to allow the user to be able to click the web-site link in the popup box annotation. The pop-up box will only change thereafter when the user hovers over a new agency bar. On my second scene (the Sub-Agency bubble chart analysis), an annotation can be found by hovering the mouse over an individual bubble whereby a small pop-up box will appear displaying the full Sub-Agency name, agency expenditure as well the % of agency expenditure to the total budget allocation.
+The narrative visualisation project makes use of <b>annotations</b> first on the first scene whereby the user can however over an individual bar in the chart and a large pop-up box will display to the right of the bar chart and provide additional information relevant to the highlighted bar such as the full department name, agency mission, agency expenditure as well as clickable link to the agency's web-site. You will note that I made the pop-up box appear static if the user moves the mouse off a chosen bar, this is to allow the user to be able to click the web-site link in the popup box annotation. The pop-up box will only change thereafter when the user hovers over a new agency bar. On my second scene (the Sub-Agency bubble chart analysis), an annotation can be found by hovering the mouse over an individual bubble whereby a small pop-up box will appear displaying the full Sub-Agency name, agency expenditure as well the % of agency expenditure to the total budget allocation.
 
 <br><br>
 
-The narrative visualisation utilises parameters as follows:
+The narrative visualisation utilises <b>parameters</b> as follows:
 <ul style="list-style-type:circle">
-<li>Selected individual bar through a mouse over event is used to dynamically select the appropriate content to display in the large pop-up box to the right of the bar chart visualisation in the first scene (Primary Awarding agencies)</li>
-<li>There are two hidden parameters used to maintain the linkage (state storage) between the first scene and the second scene which stores the agency short name (e.g. DOJ) as well as the agency long name (e.g. Department of Justice). Through these parameters stored in the HTML5 localStorage approach, the narrative visualisation is able to link the chosen Primary Agency clicked on in the bar chart to dynamically display the Sub-Agency bubble chart in scen 2 as well as display the relevant selected agency name in the initial paragraph.</li>  
-<li>Lastly again on the bubble chart, the mouse over event is used to select a specific Sub-Agency in order to display the relevant information in the tooltip pop-up anootation correctly</li>
+<li>Selected individual bar through a 'mouse over' event is used to dynamically select the appropriate content to display in the large pop-up box to the right of the bar chart visualisation in the first scene (Primary Awarding agencies)</li>
+<li>There are two hidden parameters used to maintain the linkage (state storage) between the first scene and the second scene which stores the agency short name (e.g. DOJ) as well as the agency long name (e.g. Department of Justice). Through these parameters stored in the HTML5 localStorage approach, the narrative visualisation is able to link the chosen Primary Agency clicked on in the bar chart to dynamically display the Sub-Agency bubble chart in scene 2 as well as display the relevant selected agency name in the initial paragraph.</li>  
+<li>Lastly again on the bubble chart second scene, the 'mouse over' event is used to select a specific Sub-Agency in order to display the relevant information in the tooltip pop-up annotation correctly</li>
 </ul>
 
 <br>
 
-The narrative visualisation utilises the following triggers:
+The narrative visualisation utilises the following <b>triggers</b>:
 <ul style="list-style-type:circle">
 <li>A 'mouse hover over' trigger is used to change the selected bar chart colour in the first scene in order to accentuate a specific agency from the remaining non-selected agencies</li>
 <li>The 'mouse over' trigger is also used to trigger the large pop-up box to the right of bar chart to appear as well as display only relevant data for the highlighted agency bar. This trigger event is communicated to the user in the initial paragraph scene description</li>  
-<li>A 'mouse click' event trigger is also used to denote the user's selection of a given agency in the bar chart and to transition to scene 2 for the the more granular Sub-Agency analysis via a bubble chart visualisation. This trigger event will edit the hidden parameter storage of agency short name and agency long name in HTML5 localStorage which represents the state of the visualisation. This event type is communicated to the user in the initial paragraph as an option.</li>
+<li>A 'mouse click' event trigger is also used to denote the user's selection of a given agency in the bar chart and to transition to scene 2 for the more granular Sub-Agency analysis via a bubble chart visualisation. This trigger event will edit the hidden parameter storage of agency short name and agency long name in HTML5 localStorage which represents the state of the visualisation. This event type is communicated to the user in the initial paragraph as an option.</li>
 <li>A 'mouse hover over' trigger is used in the second scene to generate a tooltip pop-up box over a selected bubble and display specific information on demand. This event trigger is described in the introductory paragraph above the bubble chart</li>
 </ul> 
 
